@@ -21,16 +21,21 @@ public class Main {
         }
     }
 
-    public static void delivery(int deliveryDistance) {
-        if (deliveryDistance <= 20) {
-            System.out.println("Доставка в пределах " + deliveryDistance + " км занимает сутки.");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            System.out.println("Доставка в пределах " + deliveryDistance + " км занимает двое суток.");
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            System.out.println("Доставка в пределах " + deliveryDistance + " км занимает трое суток.");
-        } else {
-            System.out.println("Свыше 100 км доставки нет");
+    public static int delivery(int deliveryDistance) {
+        if (deliveryDistance < 0 || deliveryDistance > 100) {
+            return -1;
+
         }
+
+        int day = 1;
+
+          if (deliveryDistance >= 20) {
+            ++day;
+        }  if (deliveryDistance >= 60) {
+            ++day;
+        }
+        //   return day;
+        return day;
     }
 
 
@@ -57,7 +62,8 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        int distance = 95;
-        delivery(distance);
+        int distance = 45;
+        int day = delivery(distance);
+        System.out.println("Доставка в пределах " + distance + " км занимает " +day+" суток.");
     }
 }
