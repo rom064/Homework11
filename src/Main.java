@@ -8,13 +8,13 @@ public class Main {
         return leapYear;
     }
 
-    public static void operatingSystem(int client_OS, int DeviceYear) {
-        if (client_OS == 1 && DeviceYear > 2015) {
+    public static void operatingSystem(int client_OS, int deviceYear) {
+        if (client_OS == 1 && deviceYear > 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (DeviceYear <= 2015) {
+        } else if (deviceYear <= 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
 
-        } else if (client_OS == 0 && DeviceYear > 2015) {
+        } else if (client_OS == 0 && deviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
